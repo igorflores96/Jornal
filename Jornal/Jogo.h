@@ -8,8 +8,14 @@ public:
 	~Jogo();
 
 	void inicializar();
+	void executar();
 	void finalizar();
 
-	void executar();
+private:
+
+	Sprite spriteJornal, player;
+	Texto tituloJornal, textoColuna;
+
+	
 };
 
