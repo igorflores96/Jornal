@@ -35,7 +35,7 @@ void Jogo::executar()
 		uniIniciarFrame();
 
 		
-		jornal.desenharTextos();
+		jornal.escreverTextos();
 	
 
 		uniTerminarFrame();

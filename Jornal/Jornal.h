@@ -7,12 +7,12 @@ public:
 
 	void carregarSpritesSheets();
 	void setarSpritesSheets();
-	void desenharTextos();
+	void escreverTextos();
 
 private:
 
 	Sprite spriteJornal;
-	Texto tituloJornal, textoColuna, data;
+	Texto tituloJornal, textoNoticia, data, site, tituloNoticia;
 
 
 };
