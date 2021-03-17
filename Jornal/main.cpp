@@ -2,10 +2,11 @@
 
 int main(int argc, char* argv[])
 {
-	Jogo jogo;
-	jogo.inicializar();
-	jogo.executar();
-	jogo.finalizar();
+	Jogo Jornal;
+	
+	Jornal.inicializar();
+	Jornal.executar();
+	Jornal.finalizar();
 
 	return 0;
 }

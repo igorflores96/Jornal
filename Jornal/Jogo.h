@@ -13,9 +13,7 @@ public:
 
 private:
 
-	Sprite spriteJornal, player;
-	Texto tituloJornal, textoColuna;
-
+	Jornal jornal;
 	
 };
 
