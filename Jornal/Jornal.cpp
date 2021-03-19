@@ -54,7 +54,6 @@ void Jornal::setarSpritesSheets()
 
 void Jornal::escreverTextos()
 {
-
 	spriteJornal.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 1.2);
 	tituloJornal.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 3.5);
 	data.desenhar(gJanela.getLargura() / 1.33, gJanela.getAltura() / 4.1);
