@@ -34,8 +34,8 @@ void Jogo::executar() {
 
 		uniIniciarFrame();
 
-		jornal.escreverTextos();
 		jornal.desenharRecursos();
+		jornal.escreverTextos();
 	
 
 		uniTerminarFrame();

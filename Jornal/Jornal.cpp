@@ -26,16 +26,15 @@ void Jornal::setarRecursos() {
 
 void Jornal::escreverTextos()
 {
-	capa.escreverData("17 de março de 2021, Alvorada RS.");
-	capa.escreverNoticia("bah os guri são um terror não tem ruim vamo pra cima gremiooooo fiufiuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdvfdsifsjanvughuihuihweruirhewiuhfdsbhbvdafhgbaedyubyukdhsbyfudsgbuyadgsbuydgsgabduygvbusgbadgbkuasdbguayhdbguavsdbgfuyasgfuasydifgdysuagfsudyfgdysuagfuysdagifasuydgfasuygfdasyugfasduygyudfagyudsgf");
-	capa.escreverTituloNoticia("E os guri?");
-	capa.escreverTituloNoticia("E as guria?");
-	capa.escreverSite("www.ehusguri.com.br");
-	capa.escreverTituloJornal("IgorNew's");
+	capa.escreverTituloJornal("IgorNew's", 2, 8);
+	capa.escreverData("17 de março de 2021, Alvorada RS.", 1.2, 7.8);
+	capa.escreverNoticia("bah os guri são um terror não tem ruim vamo pra cima gremiooooo fiufiuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdvfdsifsjanvughuihuihweruirhewiuhfdsbhbvdafhgbaedyubyukdhsbyfudsgbuyadgsbuydgsgabduygvbusgbadgbkuasdbguayhdbguavsdbgfuyasgfuasydifgdysuagfsudyfgdysuagfuysdagifasuydgfasuygfdasyugfasduygyudfagyudsgf", 4, 3.8);
+	capa.escreverTituloNoticia("E os guri?", 4, 4);
+	capa.escreverSite("www.ehusguri.com.br", 1, 0.5);
 }
 
 void Jornal::desenharRecursos() {
 
 	capa.desenharFolha(2, 2);
-	capa.desenharTextos();
+	//capa.desenharTextos();
 }

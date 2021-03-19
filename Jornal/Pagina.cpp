@@ -5,7 +5,7 @@ void Pagina::setaSprite(string backgroundFolha) {
 	spriteFolha.setSpriteSheet(backgroundFolha);
 }
 
-void Pagina::desenharFolha(int posicaox, int posicaoy) {
+void Pagina::desenharFolha(float posicaox, float posicaoy) {
 
 	spriteFolha.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
@@ -19,24 +19,28 @@ void Pagina::definirFontes(string fonteTitulo, string fonteNoticia, string fonte
 	site.setFonte(fonteNoticia);
 }
 
-void Pagina::escreverTituloJornal(string tituloDoJornal) {
+void Pagina::escreverTituloJornal(string tituloDoJornal, float posicaox, float posicaoy) {
 
 	tituloJornal.setString(tituloDoJornal);
 	tituloJornal.setAlinhamento(TEXTO_CENTRALIZADO);
 	tituloJornal.setCorPalavra("New's", 255, 0, 0);
 	tituloJornal.setCor(0, 0, 0);
+
+	tituloJornal.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
 
-void Pagina::escreverTituloNoticia(string tituloDaNoticia) {
+void Pagina::escreverTituloNoticia(string tituloDaNoticia, float posicaox, float posicaoy) {
 
 	tituloNoticia.setString(tituloDaNoticia);
 	tituloNoticia.setAlinhamento(TEXTO_ALINHADO_A_ESQUERDA);
 	tituloNoticia.setLarguraMaxima(250);
 	tituloNoticia.setEscala(1, 1);
 	tituloNoticia.setCor(0, 0, 0);
+
+	tituloNoticia.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
 
-void Pagina::escreverNoticia(string noticia) {
+void Pagina::escreverNoticia(string noticia, float posicaox, float posicaoy) {
 
 	textoNoticia.setString(noticia);
 	textoNoticia.setAlinhamento(TEXTO_ALINHADO_A_ESQUERDA);
@@ -44,29 +48,26 @@ void Pagina::escreverNoticia(string noticia) {
 	textoNoticia.setEscala(0.5, 0.5);
 	textoNoticia.setCor(0, 0, 0);
 	textoNoticia.setEspacamentoLinhas(1.5);
+
+	textoNoticia.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
 
-void Pagina::escreverData(string _data) {
+void Pagina::escreverData(string _data, float posicaox, float posicaoy) {
 
 	data.setString(_data);
 	data.setAlinhamento(TEXTO_ALINHADO_A_DIREITA);
-	data.setCor(255, 0, 0);
-	data.setEscala(0.35, 0.35);
+	data.setCor(0, 0, 0);
+	data.setEscala(0.8, 0.8);
+
+	data.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
 
-void Pagina::escreverSite(string _site)
+void Pagina::escreverSite(string _site, float posicaox, float posicaoy)
 {
 	site.setString(_site);
 	site.setAlinhamento(TEXTO_ALINHADO_A_ESQUERDA);
 	site.setCor(0, 0, 255);
-	site.setEscala(0.7, 0.7);
-}
+	site.setEscala(0.75, 0.75);
 
-void Pagina::desenharTextos() {
-
-	tituloJornal.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 3.5);
-	data.desenhar(gJanela.getLargura() / 1.33, gJanela.getAltura() / 4.1);
-	site.desenhar(gJanela.getLargura() / 4.4, gJanela.getAltura() / 3.05);
-	textoNoticia.desenhar(gJanela.getLargura() / 1.48, gJanela.getAltura() / 2.2);
-	tituloNoticia.desenhar(gJanela.getLargura() / 1.75, gJanela.getAltura() / 2.73);
+	site.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
