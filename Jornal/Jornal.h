@@ -1,19 +1,18 @@
 #pragma once
 #include "Pagina.h"
 
-class Jornal
-{
+class Jornal {
+
 public:
 
 	void carregarSpritesSheets();
-	void setarSpritesSheets();
+	void setarRecursos();
 	void escreverTextos();
+	void desenharRecursos();
 
 private:
 
-	Sprite spriteJornal;
-	Texto tituloJornal, textoNoticia, data, site, tituloNoticia;
-
+	Pagina capa, folha;
 
 };
 

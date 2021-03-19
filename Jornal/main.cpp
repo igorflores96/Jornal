@@ -1,7 +1,7 @@
 #include "Jogo.h"
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
+
 	Jogo Jornal;
 	
 	Jornal.inicializar();
