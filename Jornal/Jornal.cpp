@@ -35,7 +35,7 @@ void Jornal::escreverTextos()
 	capa.escreverData("17 de março de 2021, Alvorada RS.", 1.2, 7.8);
 	capa.escreverNoticia("bah os guri são um terror não tem ruim vamo pra cima gremiooooo fiufiuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdvfdsifsjanvughuihuihweruirhewiuhfdsbhbvdafhgbaedyubyukdhsbyfudsgbuyadgsbuydgsgabduygvbusgbadgbkuasdbguayhdbguavsdbgfuyasgfuasydifgdysuagfsudyfgdysuagfuysdagifasuydgfasuygfdasyugfasduygyudfagyudsgf", 5, 2.9);
 	capa.escreverTituloNoticia("E os guri?", 7, 5);
-	capa.escreverSite("www.ehusguri.com.br", 1, 0.5);
+	capa.escreverSite("www.ehusguri.com.br", 10.8, 8.4);
 }
 
 void Jornal::desenharRecursos() {
