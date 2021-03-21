@@ -34,7 +34,6 @@ void Pagina::escreverTituloNoticia(string tituloDaNoticia, float posicaox, float
 	tituloNoticia.setString(tituloDaNoticia);
 	tituloNoticia.setAlinhamento(TEXTO_ALINHADO_A_ESQUERDA);
 	tituloNoticia.setLarguraMaxima(250);
-	tituloNoticia.setEscala(1, 1);
 	tituloNoticia.setCor(0, 0, 0);
 
 	tituloNoticia.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
@@ -45,7 +44,6 @@ void Pagina::escreverNoticia(string noticia, float posicaox, float posicaoy) {
 	textoNoticia.setString(noticia);
 	textoNoticia.setAlinhamento(TEXTO_ALINHADO_A_ESQUERDA);
 	textoNoticia.setLarguraMaxima(250);
-	textoNoticia.setEscala(0.5, 0.5);
 	textoNoticia.setCor(0, 0, 0);
 	textoNoticia.setEspacamentoLinhas(1.5);
 
@@ -57,7 +55,7 @@ void Pagina::escreverData(string _data, float posicaox, float posicaoy) {
 	data.setString(_data);
 	data.setAlinhamento(TEXTO_ALINHADO_A_DIREITA);
 	data.setCor(0, 0, 0);
-	data.setEscala(0.8, 0.8);
+	data.setEscala(0.3, 0.3);
 
 	data.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
@@ -70,4 +68,19 @@ void Pagina::escreverSite(string _site, float posicaox, float posicaoy)
 	site.setEscala(0.75, 0.75);
 
 	site.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
+}
+
+void Pagina::definirImagemNoticia(string _nomeImagem)
+{
+
+	imagemNoticia.setSpriteSheet(_nomeImagem);
+
+	
+
+}
+
+void Pagina::desenharImagemNoticia(float posicaox, float posicaoy)
+{
+	imagemNoticia.setEscala(0.3, 0.3);
+	imagemNoticia.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }

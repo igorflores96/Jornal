@@ -12,11 +12,13 @@ public:
 	void escreverNoticia(string noticia, float posicaox, float posicaoy);
 	void escreverData(string _data, float posicaox, float posicaoy);
 	void escreverSite(string _site, float posicaox, float posicaoy);
+	void definirImagemNoticia(string _nomeImagem);
+	void desenharImagemNoticia(float posicaox, float posicaoy);
 
 
 private:
 
 	Texto tituloJornal, textoNoticia, data, site, tituloNoticia;
-	Sprite spriteFolha;
+	Sprite spriteFolha, imagemNoticia;
 };
 
