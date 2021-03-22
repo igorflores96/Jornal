@@ -12,7 +12,6 @@ void Pagina::desenharFolha(float posicaox, float posicaoy) {
 
 void Pagina::definirFontes(string fonteTitulo, string fonteNoticia, string fonteTituloNoticia) {
 
-
 	tituloJornal.setFonte(fonteTitulo);
 	tituloNoticia.setFonte(fonteTituloNoticia);
 	textoNoticia.setFonte(fonteNoticia);
@@ -74,7 +73,6 @@ void Pagina::escreverSite(string _site, float posicaox, float posicaoy) {
 void Pagina::definirImagemNoticia(string _nomeImagem) {
 
 	imagemNoticia.setSpriteSheet(_nomeImagem);
-
 }
 
 void Pagina::desenharImagemNoticia(float posicaox, float posicaoy) {
@@ -82,3 +80,5 @@ void Pagina::desenharImagemNoticia(float posicaox, float posicaoy) {
 	imagemNoticia.setEscala(0.3, 0.3);
 	imagemNoticia.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
+
+

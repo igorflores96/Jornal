@@ -27,15 +27,20 @@ void Jornal::setarRecursos() {
 	capa.setaSprite("backgroundCapa");
 	capa.definirImagemNoticia("usguri");
 	folha.setaSprite("backgroundFolhaPadrao");
+	//EscreverTextos
+
 }
 
 void Jornal::escreverTextos()
 {
+	
 	capa.escreverTituloJornal("IgorNew's", 2, 11);
 	capa.escreverData("17 de março de 2021, Alvorada RS.", 1.2, 7.8);
 	capa.escreverNoticia("bah os guri são um terror não tem ruim vamo pra cima gremiooooo fiufiuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdvfdsifsjanvughuihuihweruirhewiuhfdsbhbvdafhgbaedyubyukdhsbyfudsgbuyadgsbuydgsgabduygvbusgbadgbkuasdbguayhdbguavsdbgfuyasgfuasydifgdysuagfsudyfgdysuagfuysdagifasuydgfasuygfdasyugfasduygyudfagyudsgf", 5, 2.9);
 	capa.escreverTituloNoticia("E os guri?", 7, 5);
 	capa.escreverSite("www.ehusguri.com.br", 10.8, 8.4);
+
+	//folha.escreverNoticia("é os guri meu não tem ruim", 2, 2);
 }
 
 void Jornal::desenharRecursos() {

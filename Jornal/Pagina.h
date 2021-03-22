@@ -1,6 +1,10 @@
-#include "libUnicornio.h"
+#include "Noticias.h"
+
+
 
 class Pagina {
+
+	
 
 public:
 
@@ -20,5 +24,8 @@ private:
 
 	Texto tituloJornal, textoNoticia, data, site, tituloNoticia;
 	Sprite spriteFolha, imagemNoticia;
+	string tituloDefinido;
+	Noticias noticia[3];
+	int quantidadeDeNoticias;
 };
 
