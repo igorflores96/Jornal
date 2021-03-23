@@ -1,7 +1,7 @@
 #pragma once
 #include "Pagina.h"
 
-
+enum PaginasJornal { primeiraPagina, segundaPagina};
 
 class Jornal {
 
@@ -14,6 +14,7 @@ public:
 
 private:
 
+	PaginasJornal paginaAtual;
 	Pagina capa, folha;
 
 };

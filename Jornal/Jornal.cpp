@@ -16,6 +16,8 @@ void Jornal::carregarSpritesSheets() {
 		gRecursos.carregarFonte("tituloNoticia", "../assets/new_browserlink.ttf", 36);
 	if (!gRecursos.carregouFonte("textoNoticia"))
 		gRecursos.carregarFonte("textoNoticia", "../assets/pixelplay.ttf", 12);
+
+	paginaAtual = primeiraPagina;
 }
 
 void Jornal::setarRecursos() {
@@ -31,21 +33,42 @@ void Jornal::setarRecursos() {
 
 }
 
-void Jornal::escreverTextos()
-{
-	
-	capa.escreverTituloJornal("IgorNew's", 2, 11);
-	capa.escreverData("17 de março de 2021, Alvorada RS.", 1.2, 7.8);
-	capa.escreverNoticia("bah os guri são um terror não tem ruim vamo pra cima gremiooooo fiufiuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdvfdsifsjanvughuihuihweruirhewiuhfdsbhbvdafhgbaedyubyukdhsbyfudsgbuyadgsbuydgsgabduygvbusgbadgbkuasdbguayhdbguavsdbgfuyasgfuasydifgdysuagfsudyfgdysuagfuysdagifasuydgfasuygfdasyugfasduygyudfagyudsgf", 5, 2.9);
-	capa.escreverTituloNoticia("E os guri?", 7, 5);
-	capa.escreverSite("www.ehusguri.com.br", 10.8, 8.4);
+void Jornal::escreverTextos() {
 
-	//folha.escreverNoticia("é os guri meu não tem ruim", 2, 2);
+	capa.escreverTituloJornal("IgorNew's");
+	capa.escreverData("17 de março de 2021, Alvorada RS.");
+	capa.escreverNoticia("bah os guri são um terror não tem ruim vamo pra cima gremiooooo fiufiuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdvfdsifsjanvughuihuihweruirhewiuhfdsbhbvdafhgbaedyubyukdhsbyfudsgbuyadgsbuydgsgabduygvbusgbadgbkuasdbguayhdbguavsdbgfuyasgfuasydifgdysuagfsudyfgdysuagfuysdagifasuydgfasuygfdasyugfasduygyudfagyudsgf");
+	capa.escreverTituloNoticia("E os guri?");
+	capa.escreverSite("www.ehusguri.com.br");
+
+
+	folha.escreverTituloNoticia("Mas e as guria?");
+	folha.escreverNoticia("obviamente as gurias também são um terror, não tem essa né magrão todo mundo dale e não tem jeito");
+	folha.escreverTituloNoticia("ué como assim");
+
 }
 
 void Jornal::desenharRecursos() {
 
-	capa.desenharFolha(2, 2);
-	capa.desenharImagemNoticia(1.45, 3.2);
-	//capa.desenharTextos();
+	if (gTeclado.pressionou[TECLA_R])
+		paginaAtual = segundaPagina;
+	else if (gTeclado.pressionou[TECLA_Q])
+		paginaAtual = primeiraPagina;
+
+	if (paginaAtual == primeiraPagina) {
+
+		capa.desenharFolha(2, 2);
+		capa.desenharImagemNoticia(1.45, 3.2);
+		capa.desenharTituloJornal(2, 11);
+		capa.desenharData(1.2, 7.8);
+		capa.desenharNoticia(5, 2.9);
+		capa.desenharTituloNoticia(7, 5);
+		capa.desenharSite(10.8, 8.4);
+	}
+	else if (paginaAtual == segundaPagina) {
+
+		folha.desenharFolha(2, 2);
+		folha.desenharTituloNoticia(3, 3);
+		folha.desenharNoticia(2, 2);
+	}
 }
