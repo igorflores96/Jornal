@@ -8,6 +8,7 @@ class Pagina {
 
 public:
 
+	void inicializar(int quantiaNoticias);
 	void setaSprite(string backgroundFolha);
 	void desenharFolha(float posicaox, float posicaoy);
 	void definirFontes(string fonteTitulo, string fonteNoticia, string fonteTituloNoticia);
@@ -30,7 +31,7 @@ private:
 	Texto tituloJornal, textoNoticia, data, site, tituloNoticia;
 	Sprite spriteFolha, imagemNoticia;
 	string tituloDefinido;
-	Noticias noticia[3];
+	Noticias* noticias;
 	int quantidadeDeNoticias;
 };
 

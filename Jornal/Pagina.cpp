@@ -1,5 +1,11 @@
 #include "Pagina.h"
 
+void Pagina::inicializar(int quantiaNoticias)
+{
+	quantidadeDeNoticias = quantiaNoticias;
+	noticias = new Noticias[quantidadeDeNoticias];
+}
+
 void Pagina::setaSprite(string backgroundFolha) {
 
 	spriteFolha.setSpriteSheet(backgroundFolha);
@@ -17,6 +23,13 @@ void Pagina::definirFontes(string fonteTitulo, string fonteNoticia, string fonte
 	textoNoticia.setFonte(fonteNoticia);
 	data.setFonte(fonteTitulo);
 	site.setFonte(fonteNoticia);
+
+	for (int n = 0; n < quantidadeDeNoticias; n++) {
+
+		noticias[n].recebeFonteTitulo(fonteTituloNoticia);
+		noticias[n].recebeFonteNoticia(fonteNoticia);
+	}
+	
 }
 
 void Pagina::escreverTituloJornal(string tituloDoJornal) {
