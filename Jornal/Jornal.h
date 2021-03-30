@@ -7,15 +7,16 @@ class Jornal {
 
 public:
 
-	void carregarSpritesSheets();
+	void inicializar();
 	void setarRecursos();
 	void escreverTextos();
 	void desenharRecursos();
-
+protected:
+	void carregarSpritesSheets();
 private:
-
+	
 	PaginasJornal paginaAtual;
-	Pagina capa, folha;
+	Pagina* paginas;
 
 };
 

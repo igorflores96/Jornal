@@ -13,9 +13,10 @@ void Jogo::inicializar() {
 	uniInicializar(650, 800, false);
 
 	//	O resto da inicialização vem aqui!
-	
-	jornal.carregarSpritesSheets();
-	jornal.setarRecursos();
+	jornal = new Jornal;
+
+	jornal->inicializar();
+	jornal->setarRecursos();
 
 		
 }
@@ -34,8 +35,8 @@ void Jogo::executar() {
 
 		uniIniciarFrame();
 
-		jornal.desenharRecursos();
-		jornal.escreverTextos();
+		jornal->desenharRecursos();
+		jornal->escreverTextos();
 	
 
 		uniTerminarFrame();

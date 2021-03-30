@@ -13,7 +13,7 @@ public:
 
 private:
 
-	Jornal jornal;
+	Jornal *jornal;
 	
 };
 

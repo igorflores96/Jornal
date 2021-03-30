@@ -20,31 +20,37 @@ void Jornal::carregarSpritesSheets() {
 	paginaAtual = primeiraPagina;
 }
 
+void Jornal::inicializar()
+{
+	paginas = new Pagina[2];
+	carregarSpritesSheets();
+}
+
 void Jornal::setarRecursos() {
 
 	//Fontes
-	capa.definirFontes("titulo", "textoNoticia", "tituloNoticia");
-	folha.definirFontes("titulo", "textoNoticia", "tituloNoticia");
+	paginas[0].definirFontes("titulo", "textoNoticia", "tituloNoticia");
+	paginas[1].definirFontes("titulo", "textoNoticia", "tituloNoticia");
 	//Background
-	capa.setaSprite("backgroundCapa");
-	capa.definirImagemNoticia("usguri");
-	folha.setaSprite("backgroundFolhaPadrao");
+	paginas[0].setaSprite("backgroundCapa");
+	paginas[0].definirImagemNoticia("usguri");
+	paginas[1].setaSprite("backgroundFolhaPadrao");
 	//EscreverTextos
 
 }
 
 void Jornal::escreverTextos() {
 
-	capa.escreverTituloJornal("IgorNew's");
-	capa.escreverData("17 de março de 2021, Alvorada RS.");
-	capa.escreverNoticia("bah os guri são um terror não tem ruim vamo pra cima gremiooooo fiufiuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdvfdsifsjanvughuihuihweruirhewiuhfdsbhbvdafhgbaedyubyukdhsbyfudsgbuyadgsbuydgsgabduygvbusgbadgbkuasdbguayhdbguavsdbgfuyasgfuasydifgdysuagfsudyfgdysuagfuysdagifasuydgfasuygfdasyugfasduygyudfagyudsgf");
-	capa.escreverTituloNoticia("E os guri?");
-	capa.escreverSite("www.ehusguri.com.br");
+	paginas[0].escreverTituloJornal("IgorNew's");
+	paginas[0].escreverData("17 de março de 2021, Alvorada RS.");
+	paginas[0].escreverNoticia("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare vestibulum velit vitae congue. Quisque in egestas tellus. In lacinia enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla egestas leo facilisis posuere pellentesque. Ut fringilla aliquam aliquet.");
+	paginas[0].escreverTituloNoticia("Lorem Ipsum?");
+	paginas[0].escreverSite("www.Lorem Ipsum.com.br");
 
 
-	folha.escreverTituloNoticia("Mas e as guria?");
-	folha.escreverNoticia("obviamente as gurias também são um terror, não tem essa né magrão todo mundo dale e não tem jeito");
-	folha.escreverTituloNoticia("ué como assim");
+	paginas[1].escreverTituloNoticia("Lorem Ipsum?");
+	paginas[1].escreverNoticia("Maecenas viverra accumsan ante, quis laoreet risus laoreet a. Nunc ut aliquam libero. Sed scelerisque eros non ultrices pretium. Etiam faucibus nisl quis sem condimentum, ac sollicitudin metus imperdiet. Curabitur bibendum nisl in felis condimentum congue.");
+
 
 }
 
@@ -57,18 +63,18 @@ void Jornal::desenharRecursos() {
 
 	if (paginaAtual == primeiraPagina) {
 
-		capa.desenharFolha(2, 2);
-		capa.desenharImagemNoticia(1.45, 3.2);
-		capa.desenharTituloJornal(2, 11);
-		capa.desenharData(1.2, 7.8);
-		capa.desenharNoticia(5, 2.9);
-		capa.desenharTituloNoticia(7, 5);
-		capa.desenharSite(10.8, 8.4);
+		paginas[0].desenharFolha(2, 2);
+		paginas[0].desenharImagemNoticia(1.45, 3.2);
+		paginas[0].desenharTituloJornal(2, 11);
+		paginas[0].desenharData(1.2, 7.8);
+		paginas[0].desenharNoticia(5, 2.9);
+		paginas[0].desenharTituloNoticia(5.8, 5);
+		paginas[0].desenharSite(10.8, 8.4);
 	}
 	else if (paginaAtual == segundaPagina) {
 
-		folha.desenharFolha(2, 2);
-		folha.desenharTituloNoticia(3, 3);
-		folha.desenharNoticia(2, 2);
+		paginas[1].desenharFolha(2, 2);
+		paginas[1].desenharTituloNoticia(5, 3);
+		paginas[1].desenharNoticia(4.5, 2.25);
 	}
 }
