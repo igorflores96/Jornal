@@ -119,4 +119,9 @@ void Pagina::desenharImagemNoticia(float posicaox, float posicaoy) {
 	imagemNoticia.desenhar(gJanela.getLargura() / posicaox, gJanela.getAltura() / posicaoy);
 }
 
+Noticias* Pagina::getNoticias()
+{
+	return noticias;
+}
+
 

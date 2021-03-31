@@ -13,7 +13,7 @@ void Jogo::inicializar() {
 	uniInicializar(650, 800, false);
 
 	//	O resto da inicialização vem aqui!
-	jornal = new Jornal;
+	jornal = new Jornal();
 
 	jornal->inicializar();
 	jornal->setarRecursos();

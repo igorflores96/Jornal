@@ -24,6 +24,7 @@ public:
 	void desenharSite(float posicaox, float posicaoy);
 	void definirImagemNoticia(string _nomeImagem);
 	void desenharImagemNoticia(float posicaox, float posicaoy);
+	Noticias* getNoticias();
 
 
 private:

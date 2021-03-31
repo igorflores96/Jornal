@@ -22,8 +22,8 @@ void Jornal::carregarSpritesSheets() {
 
 void Jornal::inicializar()
 {
-	paginas = new Pagina[2];
 	carregarSpritesSheets();
+	paginas = new Pagina[2];
 	for (int p = 0; p < 2; p++)
 		paginas[p].inicializar(3);
 }
@@ -52,7 +52,6 @@ void Jornal::escreverTextos() {
 
 	paginas[segundaPagina].escreverTituloNoticia("Lorem Ipsum?");
 	paginas[segundaPagina].escreverNoticia("Maecenas viverra accumsan ante, quis laoreet risus laoreet a. Nunc ut aliquam libero. Sed scelerisque eros non ultrices pretium. Etiam faucibus nisl quis sem condimentum, ac sollicitudin metus imperdiet. Curabitur bibendum nisl in felis condimentum congue.");
-
 
 }
 
